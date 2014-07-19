@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Matt Baker"]
   s.email       = 'mbaker.pdx+websocketpipe@gmail.com'
   s.files       = ["lib/websocket-pipe.rb"]
+  s.add_runtime_dependency "em-websocket", ['>= 0.5.1', '< 0.6.0']
   s.homepage    =
     'https://github.com/mattbaker/websocket-pipe'
   s.license       = 'Apache License, Version 2.0'
