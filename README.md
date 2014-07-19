@@ -66,8 +66,8 @@ tail -f /private/var/log/system.log | ruby stdin-to-ws.rb
 > <ul>
 >     <li>Jul 19 12:56:27 --- last message repeated 2 times ---<br></li>
 >     <li>Jul 19 12:56:36 YourMachine.local login[30604]: USER_PROCESS: > 30604 ttys001<br></li>
->     <li>Jul 19 12:56:38 1Q84.local login[30604]: DEAD_PROCESS: 30604 > ttys001<br></li>
+>     <li>Jul 19 12:56:38 YourMachine.local login[30604]: DEAD_PROCESS: 30604 > ttys001<br></li>
 >     <li>Jul 19 12:57:18 YourMachine.local login[30758]: USER_PROCESS: > 30758 ttys001<br></li>
->     <li>Jul 19 12:58:02 1Q84 kernel[0]: The USB device Apple Internal > Keyboard / Trackpad (Port 5 of Hub at 0x14000000) may have caused a > wake by issuing a remote wakeup (2)<br></li>
+>     <li>Jul 19 12:58:02 YourMachine kernel[0]: The USB device Apple Internal > Keyboard / Trackpad (Port 5 of Hub at 0x14000000) may have caused a > wake by issuing a remote wakeup (2)<br></li>
 >     <li>Jul 19 12:58:38 --- last message repeated 1 time ---<br></li>
 > </ul>
