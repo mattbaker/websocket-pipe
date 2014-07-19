@@ -4,6 +4,20 @@ Pipe IO to a websocket, broadcast to clients
 
 websocket-pipe allows you to pipe Ruby IO streams (files, stdin/stdout, sockets, etc) to a websocket server. The server will broadcast your message to all connected clients.
 
+##API
+
+`WebsocketPipe.`**`new(reader[,host_info])`**
+
+Creates a new WebsocketPipe reading from the supplied `IO` object `reader`. Optional `host_info` will be passed to `[EM::WebSocket](https://github.com/igrigorik/em-websocket).run`. 
+
+`WebSocketPipe.`**`fork!`**
+
+Forks your websocket server off in a new process. Return value is a tuple of the process pid and a `writer` stream. The associated `reader` is used by the websocket process to broadcast data from `writer` to connected clients.
+
+`#`**`start!`**
+
+Starts the server.
+
 ##Example
 ### Tailing `system.log`
 In the example below we'll pipe the output of a `tail` call to our browser, which will display the output as an unordered list.
@@ -13,7 +27,7 @@ In the example below we'll pipe the output of a `tail` call to our browser, whic
 ```ruby
 require 'websocket-pipe'
 
-WebSocketPipe.new(STDIN).start!
+WebsocketPipe.new(STDIN).start!
 ```
 
 
