@@ -4,6 +4,10 @@ Pipe IO to a websocket, broadcast to clients
 
 websocket-pipe allows you to pipe Ruby IO streams (files, stdin/stdout, sockets, etc) to a websocket server. The server will broadcast your message to all connected clients.
 
+##Installation
+
+`gem install websocket-pipe`
+
 ##API
 
 `WebsocketPipe.`**`new(reader[,host_info])`**
