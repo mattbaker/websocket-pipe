@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Pipe</title>
+    <style>
+      #log { font-family: Anonymous Pro, monospace}
+    </style>
+  </head>
+  <body>
+    <ul id="log">
+    </ul>
+  </body>
+
+  <script>
+    var socket = new WebSocket('ws://localhost:8080');
+
+    socket.onmessage = function(event) {
+      var msg = document
+        .createElement("li")
+      msg.innerText = event.data
+      document
+        .getElementById("log")
+        .appendChild(msg);
+    };
+    socket.onopen = function(event) {
+      console.log('Connected:', event.target.url)
+    };
+    socket.onerror = function(error) {
+      console.warn('WebSocket Error:' , error);
+    };
+  </script>
+</html>
