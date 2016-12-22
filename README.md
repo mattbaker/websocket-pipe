@@ -10,11 +10,11 @@ websocket-pipe allows you to pipe Ruby IO streams (files, stdin/stdout, sockets,
 
 ##API
 
-`WebsocketPipe.`**`new(reader[,host_info])`**
+`::`**`new(reader[,host_info])`**
 
 Creates a new WebsocketPipe reading from the supplied `IO` object `reader`. Optional `host_info` will be passed to `[EM::WebSocket](https://github.com/igrigorik/em-websocket).run`.
 
-`WebsocketPipe.`**`fork!`**
+`::`**`fork!`**
 
 Forks your websocket server off in a new process. Return value is a tuple of the process pid and a `writer` stream. The associated `reader` is used by the websocket process to broadcast data from `writer` to connected clients.
 
